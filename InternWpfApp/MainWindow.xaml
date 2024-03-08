@@ -1,0 +1,31 @@
+﻿<Window x:Class="InternWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:InternWpfApp"
+        mc:Ignorable="d"
+        Title="Обрахунок послідовності чисел" Height="550" Width="600"  FontSize="16" FontFamily="Times New Roman" ResizeMode="NoResize">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+        </Grid.RowDefinitions>
+        <Button Name ="CountDataButton" Grid.Row="3" Content="Знайти дані" HorizontalAlignment="Center" Height="28" Margin="0,0,0,47" VerticalAlignment="Bottom" Width="104" IsEnabled = "False" Click="CountDataButton_Click"/>
+        <Button Name="FindFileButton" Grid.Row="1" Content="Обрати файл" HorizontalAlignment="Stretch" Height="28" Margin="0,0,0,0" VerticalAlignment="Top" Width="104" Click="Find_File_Button_Async_Click"/>
+        <TextBox Grid.Row="0" Name="File_Path" Height="20" Margin="0,36,92,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Оберіть файл з послідовністю чисел" IsReadOnly="True" HorizontalAlignment="Right" Width="416"/>
+        <Label Grid.Row="1" Content="Мінімум" Margin="50,54,0,0" HorizontalAlignment="Left" Width="72" Height="28" VerticalAlignment="Top"/>
+        <Label Grid.Row="1" Content="Максимум" Margin="40,102,0,0" HorizontalAlignment="Left" Width="82" Height="28" VerticalAlignment="Top"/>
+        <Label Grid.Row="1" Content="Медіана" Height="28" Margin="355,102,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="68"/>
+        <TextBox Grid.Row="1" Name="Min" Height="22" Margin="125,57,385,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True"/>
+        <TextBox Grid.Row="1" Name="Max" Height="22" Margin="125,105,385,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True"/>
+        <TextBox Grid.Row="1" Name="Median" Height="22" Margin="425,105,87,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True"/>
+        <Label Grid.Row="1" Content="Середнє арифметичне" HorizontalAlignment="Left" Height="28" Margin="262,54,0,0" VerticalAlignment="Top" Width="161"/>
+        <Label Grid.Row="2" Content="Спадаюча&#xD;&#xA;послідовність" HorizontalAlignment="Left" Height="53" Margin="20,90,0,0" VerticalAlignment="Top" Width="104"/>
+        <Label Grid.Row="2" Content="Зростаюча &#xD;&#xA;послідовність" HorizontalAlignment="Left" Height="53" Margin="20,0,0,0" VerticalAlignment="Top" Width="104"/>
+        <TextBox Grid.Row="1" Name="Average" Height="22" Margin="425,57,35,0" TextWrapping="Wrap" VerticalAlignment="Top" IsReadOnly="True"/>
+        <TextBox Grid.Row="2" Name="Decreasing_Seq" Margin="124,90,92,0" TextWrapping="Wrap" IsReadOnly="True" Height="55" VerticalAlignment="Top" />
+        <TextBox Grid.Row="2" Name="Increasing_Seq" Margin="124,0,92,0" TextWrapping="Wrap" IsReadOnly="True" Height="55" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
